@@ -27,7 +27,10 @@ function App() {
           </Switch>
         </Router>
       </AuthProvider>
-      <div style="width:100%; padding:5em 0em" />
+      <div style={{
+        width:"100%",
+        padding:"5em 0em"
+        }}/>
     </div>
   );
 }
