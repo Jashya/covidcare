@@ -1,0 +1,38 @@
+import React from "react";
+import { Auth, GoogleProvider } from "../../firebase";
+
+interface Props {}
+
+const LoginHandler = (props: Props) => {
+  const handleLogin = () => {
+    Auth.signInWithPopup(GoogleProvider)
+      .then((result) => {
+        var credential = result.credential;
+
+        // This gives you a Google Access Token. You can use it to access the Google API.
+        var token: firebase.default.auth.OAuthCredential = credential!;
+        // The signed-in user info.
+        var user = result.user;
+        console.log(user, token);
+      })
+      .catch((error) => {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        // The email of the user's account used.
+        var email = error.email;
+        // The firebase.auth.AuthCredential type that was used.
+        var credential = error.credential;
+        console.log(errorCode, errorMessage, email, credential);
+
+        alert(errorMessage);
+      });
+  };
+  return (
+    <button type="button" onClick={handleLogin} className="btn btn-primary">
+      Sign In With Google
+    </button>
+  );
+};
+
+export default LoginHandler;

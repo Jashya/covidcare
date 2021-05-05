@@ -1,0 +1,17 @@
+.resource-item {
+  padding: 2%;
+  margin: 20px;
+  border-radius: 7px;
+  border: 2px solid #8a8a8a;
+  box-shadow: 2px 2px 8px lightblue;
+}
+body {
+  font-size: 22px;
+}
+
+@media only screen and (max-width: 768px) {
+  .d-flex {
+    display: block !important;
+    align-items: center;
+  }
+}
