@@ -51,7 +51,7 @@ function ResourcePage({ type }: Props): ReactElement {
               type={data.type}
               resource={data.resource}
               city={data.city}
-              verified={data.verified}
+              verified={data.verified!}
               contact={data.contact}
             />
           ))
