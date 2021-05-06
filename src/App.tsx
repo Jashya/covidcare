@@ -27,6 +27,36 @@ function App() {
           </Switch>
         </Router>
       </AuthProvider>
+      <p>
+          <strong>Developed by:</strong>{" "}
+          <a
+            href="http://github.com/w3Abhishek"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Abhishek Verma
+          </a>{" "}
+          and{" "}
+          <a
+            href="http://github.com/piyushsuthar"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Piyush Suthar
+          </a>
+        </p>
+        <p>
+          In Association with{" "}
+          <strong>
+            <a
+              href="https://srijankasankalp.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="https://i.ibb.co/wwhLzGk/Srijan-Logo.png" alt="" width="163" height="39" />
+            </a>
+          </strong>
+        </p>
       <div style={{
         width:"100%",
         padding:"5em 0em"
