@@ -45,11 +45,7 @@ function App() {
             rel="noopener noreferrer"
           >
             Piyush
-          </a>
-        </p>
-        <p style={{
-        text-align:"center"
-        }}>
+        </a><br/>
           In Association with{" "}
           <strong>
             <a
