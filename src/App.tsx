@@ -28,7 +28,7 @@ function App() {
         </Router>
       </AuthProvider>
       <p style={{
-        textAlign:"center"
+        text-align:"center"
         }}>
           <strong>A Project by </strong>{" "}
           <a
