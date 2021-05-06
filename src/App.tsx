@@ -27,7 +27,9 @@ function App() {
           </Switch>
         </Router>
       </AuthProvider>
-      <center><p>
+      <p style={{
+        text-align:"center"
+        }}>
           <strong>A Project by </strong>{" "}
           <a
             href="http://github.com/w3Abhishek"
@@ -45,7 +47,9 @@ function App() {
             Piyush
           </a>
         </p>
-        <p>
+        <p style={{
+        text-align:"center"
+        }}>
           In Association with{" "}
           <strong>
             <a
@@ -56,7 +60,7 @@ function App() {
               <img src="https://i.ibb.co/wwhLzGk/Srijan-Logo.png" alt="" width="163" height="39" />
             </a>
           </strong>
-        </p></center>
+        </p>
       <div style={{
         width:"100%",
         padding:"5em 0em"
