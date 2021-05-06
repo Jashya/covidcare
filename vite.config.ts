@@ -1,17 +1,7 @@
 import { defineConfig } from 'vite'
-import prefresh from '@prefresh/vite';
+import reactRefresh from '@vitejs/plugin-react-refresh'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  esbuild: {
-    jsxFactory: 'h',
-    jsxFragment: 'Fragment',
-    jsxInject: `import { h, Fragment } from 'preact'`,
-  },
-  plugins: [prefresh()],
-  resolve: {
-    alias: {
-      react: 'preact/compat',
-    }
-  }
-});
+  plugins: [reactRefresh()]
+})
