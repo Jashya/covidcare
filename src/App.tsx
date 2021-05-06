@@ -27,14 +27,14 @@ function App() {
           </Switch>
         </Router>
       </AuthProvider>
-      <p>
-          <strong>Developed by:</strong>{" "}
+      <center><p>
+          <strong>A Project by </strong>{" "}
           <a
             href="http://github.com/w3Abhishek"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Abhishek Verma
+            Abhishek
           </a>{" "}
           and{" "}
           <a
@@ -42,7 +42,7 @@ function App() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Piyush Suthar
+            Piyush
           </a>
         </p>
         <p>
@@ -56,7 +56,7 @@ function App() {
               <img src="https://i.ibb.co/wwhLzGk/Srijan-Logo.png" alt="" width="163" height="39" />
             </a>
           </strong>
-        </p>
+        </p></center>
       <div style={{
         width:"100%",
         padding:"5em 0em"
