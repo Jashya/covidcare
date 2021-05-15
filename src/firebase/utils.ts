@@ -17,12 +17,14 @@ const COLLECTION_NAME = "CovidRakshak"
 
 export const getAllResource = async (): Promise<DBSchema[]> => {
   const data = await Store.collection(COLLECTION_NAME).get()
-  return parseData(data)
+  const parsedData = parseData(data)
+  return sortByVerifiedDate(parsedData)
 }
 
 export const getResourceByCategory = async (type: ResourceType): Promise<DBSchema[]> => {
   const data = await Store.collection(COLLECTION_NAME).where("type", "==", type).get()
-  return parseData(data)
+  const parsedData = parseData(data)
+  return sortByVerifiedDate(parsedData)
 }
 
 export const addToResource = (data: DBSchema) => {
@@ -38,4 +40,15 @@ const parseData = (data: firebase.default.firestore.QuerySnapshot<firebase.defau
     }
     return updatedDoc
   })
+}
+
+const sortByVerifiedDate = (arr: DBSchema[]) => {
+  arr.sort((a, b) => {
+    const aDate = new Date(`${a.verified?.time} ${a.verified?.date}`)
+    const bDate = new Date(`${b.verified?.time} ${b.verified?.date}`)
+    if (bDate.getTime() > aDate.getTime()) return 1
+    if (bDate.getTime() < aDate.getTime()) return -1
+    return 0
+  })
+  return arr
 }
